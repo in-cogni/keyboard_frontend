@@ -1,0 +1,71 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #FFF4F0FF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #7730CE 0%, #89D4CF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.start-btn {
+  background-color: #7730CE;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+.login-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background-color: #7730CE;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 36px;
+  width: 104px;
+  transition: transform 0.2s;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+}
+
+.user-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #E8E0F0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}

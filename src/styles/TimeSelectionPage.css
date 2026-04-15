@@ -1,0 +1,76 @@
+.time-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #FFF4F0FF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #7730CE;
+  margin-bottom: 40px;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  background-color: #E8E0F0;
+  padding: 30px 50px;
+  border-radius: 15px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.radio-label input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.slider-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.time-slider {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666;
+}
+
+.ok-btn {
+  background-color: #7730CE;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 150px;
+  transition: transform 0.2s;
+}
+
+.ok-btn:hover {
+  transform: scale(1.05);
+}

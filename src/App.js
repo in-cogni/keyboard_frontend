@@ -1,19 +1,39 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import WelcomePage from './pages/WelcomePage';
+import TextSelectionPage from './pages/TextSelectionPage';
+import TimeSelectionPage from './pages/TimeSelectionPage';
+import './App.css';
 
 function App() {
-  const [message, setMessage] = useState('');
+  const [currentPage, setCurrentPage] = useState('welcome');
+  const [textType, setTextType] = useState('random');
+  const [timeLimit, setTimeLimit] =useState(30);
+  const goToPage = (page) => setCurrentPage(page);
 
-  const callBackend = async () => {
-    const response = await fetch('https://localhost:7102/api/values');
-    const data = await response.json();
-    setMessage(data.message);
-  };
+  if(currentPage === 'welcome'){
+    return <WelcomePage onNavigate={goToPage} />;
+  }
+  if(currentPage === 'text-selection'){
+    return (
+      <TextSelectionPage
+        onNavigate={goToPage}
+        onTextTypeSelect={setTextType}
+      />
+    );
+  }
+  if(currentPage === 'time'){
+    return (
+      <TimeSelectionPage
+        onNavigate={goToPage}
+        onTimeTypeSelect={setTimeLimit}
+      />
+    );
+  }
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Typing Trainer</h1>
-      <button onClick={callBackend}>Get Hello from Backend</button>
-      {message && <p>Ответ от бэкенда: {message}</p>}
+      <h2>Keyboard</h2>
+      <button onClick={() => goToPage('welcome')}>back</button>
     </div>
   );
 }
