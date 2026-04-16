@@ -1,0 +1,88 @@
+.typing-container {
+  min-height: 100vh;
+  background-color: #FFF4F0FF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+
+.header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #E8E0F0;
+  border-radius: 10px;
+}
+
+.timer {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7730CE;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.text-area {
+  background-color: white;
+  border: 2px solid #7730CE;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  min-height: 120px;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.typed {
+  color: #4CAF50;
+}
+
+.current {
+  background-color: #7730CE;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+}
+
+.remaining {
+  color: #999;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.6; }
+}
+
+.progress-bar {
+  width: 80%;
+  height: 8px;
+  background-color: #E0D0F0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #7730CE;
+  transition: width 0.1s linear;
+}
+
+.instruction {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #7730CE;
+  font-weight: bold;
+}

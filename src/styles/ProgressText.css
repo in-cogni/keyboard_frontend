@@ -1,0 +1,39 @@
+.progress-text-container {
+  background-color: white;
+  border: 2px solid #7730CE;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  min-height: 100px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.text-line {
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.typed-text {
+  color: #89D4CF;
+  background-color: transparent;
+}
+
+.current-char {
+  background-color: #7730CE;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+}
+
+.remaining-text {
+  color: #999;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.7; }
+}
