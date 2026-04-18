@@ -1,0 +1,83 @@
+.result-container {
+  min-height: 100vh;
+  background-color: #FFF4F0FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 400px;
+}
+
+.result-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #7730CE;
+  margin-bottom: 30px;
+}
+
+.result-stats {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #E8E0F0;
+  font-size: 18px;
+}
+
+.stat-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #7730CE;
+  font-weight: bold;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.restart-btn, .exit-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.restart-btn {
+  background-color: #7730CE;
+  color: white;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+}
+
+.exit-btn {
+  background-color: #E8E0F0;
+  color: #7730CE;
+  border: 2px solid #7730CE;
+}
+
+.exit-btn:hover {
+  transform: scale(1.05);
+}

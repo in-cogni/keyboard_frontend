@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useTypingGame } from '../hooks/useTypingGame';
 import Keyboard from '../components/Keyboard';
 
-function TypingPage({ timeLimit, generatedText, onNavigate, onGameFinish }) {
+function TypingPage({ textConfig, timeLimit, generatedText, onNavigate, onGameFinish }) {
   const {
     text1, text2, timeLeft, rightKeys, wrongKeys,
-    currentChar, highlightKey, greenFlash, redFlash, handleKeyPress
+    currentChar, highlightKey, highlightShift, greenFlash, redFlash, handleKeyPress
   } = useTypingGame(timeLimit, generatedText, (result) => {
     onGameFinish(result);
     onNavigate('result');
@@ -53,8 +53,7 @@ function TypingPage({ timeLimit, generatedText, onNavigate, onGameFinish }) {
           textAlign: 'right', 
           color: '#4CAF50', 
           width: `${FIXED_WIDTH}ch`,
-          fontFamily: 'monospace',
-          letterSpacing: 'normal'
+          fontFamily: 'monospace'
         }}>
           {leftDisplay}
         </div>
@@ -67,8 +66,7 @@ function TypingPage({ timeLimit, generatedText, onNavigate, onGameFinish }) {
           margin: '0 4px', 
           minWidth: 40, 
           textAlign: 'center', 
-          fontWeight: 'bold',
-          display: 'inline-block'
+          fontWeight: 'bold'
         }}>
           {currentChar || ' '}
         </div>
@@ -77,8 +75,7 @@ function TypingPage({ timeLimit, generatedText, onNavigate, onGameFinish }) {
           textAlign: 'left', 
           color: '#999', 
           width: `${FIXED_WIDTH}ch`,
-          fontFamily: 'monospace',
-          letterSpacing: 'normal'
+          fontFamily: 'monospace'
         }}>
           {rightDisplay}
         </div>
@@ -86,8 +83,9 @@ function TypingPage({ timeLimit, generatedText, onNavigate, onGameFinish }) {
       
       <Keyboard 
         highlightKey={highlightKey}
-        greenFlashKey={greenFlash}
-        redFlashKey={redFlash}
+        highlightShift={highlightShift}
+        greenFlash={greenFlash}
+        redFlash={redFlash}
       />
       
       <div style={{ marginTop: 20, fontSize: 18 }}>

@@ -1,6 +1,6 @@
 import '../styles/Keyboard.css';
 
-const Keyboard = ({ highlightKey, greenFlashKey, redFlashKey }) => {
+const Keyboard = ({ highlightKey, highlightShift, greenFlash, redFlash }) => {
   const rows = [
     [
       { eng: '`', rus: 'Ё', code: 'Backquote' },
@@ -77,9 +77,10 @@ const Keyboard = ({ highlightKey, greenFlashKey, redFlashKey }) => {
 
   const getKeyClass = (code) => {
     let cls = 'key';
-    if (greenFlashKey === code) cls += ' flash-green';
-    if (redFlashKey === code) cls += ' flash-red';
+    if (greenFlash === code) cls += ' flash-green';
+    if (redFlash === code) cls += ' flash-red';
     if (highlightKey === code) cls += ' highlight';
+    if (highlightShift && (code === 'ShiftLeft' || code === 'ShiftRight')) cls += ' highlight';
     return cls;
   };
 

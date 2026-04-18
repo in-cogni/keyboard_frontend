@@ -6,6 +6,7 @@
   min-height: 100vh;
   background-color: #FFF4F0FF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 .title {
@@ -15,7 +16,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -28,7 +29,6 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
   width: 200px;
   transition: transform 0.2s;
 }
@@ -37,24 +37,24 @@
   transform: scale(1.05);
 }
 
-.login-btn {
+.welcome-login-btn {
   position: absolute;
-  top: 25px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   background-color: #7730CE;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  height: 36px;
-  width: 104px;
+  width: auto;
+  min-width: 80px;
   transition: transform 0.2s;
 }
 
-.login-btn:hover {
+.welcome-login-btn:hover {
   transform: scale(1.05);
 }
 
@@ -62,10 +62,18 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   background-color: #E8E0F0;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 10px;
+  font-size: 14px;
+}
+
+.user-info div:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.user-info div:last-child {
+  color: #666;
+  font-size: 12px;
 }

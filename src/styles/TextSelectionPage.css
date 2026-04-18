@@ -39,36 +39,54 @@
   cursor: pointer;
 }
 
-.extra-field {
+.file-selection-area {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 20px;
-}
-
-.file-input {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #7730CE;
-  border-radius: 5px;
-  width: 250px;
 }
 
 .browse-btn {
   background-color: #7730CE;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 10px 24px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.browse-btn:hover {
+  transform: scale(1.02);
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #7730CE;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #666;
 }
 
 .select-dropdown {
-  padding: 8px 12px;
+  padding: 10px 15px;
   font-size: 16px;
-  border: 1px solid #7730CE;
-  border-radius: 5px;
+  border: 2px solid #7730CE;
+  border-radius: 8px;
   margin-bottom: 20px;
-  width: 250px;
+  width: 280px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .ok-btn {
